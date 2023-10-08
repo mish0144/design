@@ -17,12 +17,14 @@ html {
     --h1_size: 4.21rem;
     --h2_size: 3.16rem;
     --h3_size: 2.37rem;
+    --h4_size: 1.33rem;
     --p_size: 1rem;
     --p_small_size: 0.75rem;
 
     --h1_size_mobile: 2.37rem;
     --h2_size_mobile: 1.78rem;
     --h3_size_mobile: 1.33rem;
+    --h4_size_mobile: 1rem;
 
     background-color: var(--background_color);
 }
@@ -54,12 +56,6 @@ h4 {
     font-size: var(--h4_size_mobile);
 }
 
-h5 {
-    font-family: var(--h_font), cursive;
-    color: var(--text_color);
-    font-size: var(--h5_size_mobile);
-}
-
 p {
     font-family: var(--p_font), cursive;
     color: var(--text_color);
@@ -87,13 +83,9 @@ a {
     h3 {
         font-size: var(--h3_size);
     }
-    
+
     h4 {
         font-size: var(--h4_size);
-    }
-    
-    h5 {
-        font-size: var(--h5_size);
     }
     
 }
@@ -178,6 +170,21 @@ button {
     padding-top: 1rem;
     padding-bottom: 2rem;
     max-width: 100%;
+}
+
+.button1 a, .button2 a {
+    color: var(--background_color);
+    cursor: pointer;
+}
+
+.button1:hover a {
+    color: var(--primary_color);
+    text-decoration: none;
+}
+
+.button2:hover a {
+    color: var(--secondary_color);
+    text-decoration: none;
 }
 
 @media (min-width: 1000px) {
@@ -366,6 +373,10 @@ button {
 
 /*************************DEL B*************************/
 
+.delb_section {
+    margin-bottom: 3rem;
+}
+
 label {
     font-family: var(--p_font);
 }
@@ -485,9 +496,141 @@ label {
 }
 
 
-
 /*************************DEL C*************************/
 
 
 
 
+/*************************DEL D*************************/
+
+.deld_section {
+    margin-bottom: 3rem;
+}
+
+
+.deld_person {
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.deld_person1 {
+    background-color: var(--accent_color);
+}
+
+.deld_person2, .deld_person4 {
+    background-color: var(--primary_color);
+
+    p, h2, h4 {
+        color: var(--background_color);
+    }
+}
+
+.deld_person3, .deld_person5 {
+    background-color: var(--secondary_color);
+    
+    p, h2, h4 {
+        color: var(--background_color);
+    }
+}
+
+.deld_name {
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.deld_name + p {
+    padding-bottom: 0rem;
+}
+
+.deld_img {
+    background-image: url(portrait.png);
+    background-size: cover;
+    aspect-ratio: 1/1;
+    width: 25%;
+    border-radius: 10rem;
+}
+
+.deld_information {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.deld_information + h4 {
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.deld_information + h4 + p {
+    padding-bottom: 0rem;
+}
+
+
+@media (min-width: 900px) {
+
+    .deld_section {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        max-width: 100%;
+        gap: 1rem;
+    }
+
+    .deld_person {
+        margin-bottom: 0rem;
+    }
+
+    .deld_person1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .deld_person2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .deld_person3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .deld_person4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .deld_person5 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .deld_information {
+        margin-bottom: 1rem;
+    }
+
+    .deld_person4 .deld_img, .deld_person1 .deld_img {
+        width: 15%;
+    }
+
+    .deld_person5 .deld_img {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .deld_person5 .deld_information {
+        display: block;
+        margin-bottom: 2rem;
+    }
+}
