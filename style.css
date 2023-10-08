@@ -544,12 +544,30 @@ label {
 }
 
 .deld_img {
-    background-image: url(portrait.png);
     background-size: cover;
     aspect-ratio: 1/1;
     width: 25%;
     border-radius: 10rem;
 }
+
+.deld_person1 .deld_information .deld_img {
+    background-image: url(portrait.png);
+}
+
+.deld_person2 .deld_information .deld_img {
+    background-image: url(portrait1.jpg);
+}
+.deld_person3 .deld_information .deld_img {
+    background-image: url(portrait4.jpg);
+}
+.deld_person4 .deld_information .deld_img {
+    background-image: url(portrait3.jpg);
+}
+
+.deld_person5 .deld_information .deld_img {
+    background-image: url(portrait2.jpg);
+}
+
 
 .deld_information {
     display: flex;
