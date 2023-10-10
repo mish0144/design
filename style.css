@@ -126,7 +126,7 @@ nav ul li a {
     font-size: var(--h5_size);
 }
 
-button {
+.button1, .button2 {
     font-family: var(--p_font), cursive;
     color: var(--background_color);
     font-size: var(--p_size);
